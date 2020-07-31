@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Ingredient from '../components/Ingredient'
+import MealsContainer from './MealsContainer'
 
 const URL = 'https://www.themealdb.com/api/json/v1/1/list.php?i=list'
 
@@ -38,6 +39,8 @@ class Ingredients extends Component {
                 <h2>The Ingredients</h2>
                 {ingredients}
                 <hr/>
+                {this.state.ingredient !== "" ? <h3>The {this.state.ingredient} Meals:</h3> : ""}
+                <MealsContainer searchTerm={this.state.ingredient} searchType={"i"} />
             </div>
         )
     }

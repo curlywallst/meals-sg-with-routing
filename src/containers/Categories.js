@@ -34,13 +34,14 @@ class Categories extends Component {
         let categories = this.state.categories.map((category, i) => {
             return <Category key={i} category={category.strCategory}  handleClick={this.handleOnClick} />
         })
+        
         return (
             <div>
                 <h2>The Categories</h2>
                 {categories}
                 <hr/>
-                {this.state.category !== "" ? <h3>The {this.state.category} Meals:</h3> : ""}
-                <MealsContainer searchTerm={this.state.category} searchType={"c"} />
+                {/* {this.state.category !== "" ? <h3>The {this.state.category} Meals:</h3> : ""}
+                <MealsContainer searchTerm={this.state.category} searchType={"c"} /> */}
             </div>
         )
     }

@@ -3,7 +3,7 @@ import MealsContainer from './MealsContainer'
 
 class IngredientMeals extends Component {
     render() {
-
+        
         return (
             <div>
                 <h2>The Meals With {this.props.match.params.id.split("_").join(" ")}</h2>
